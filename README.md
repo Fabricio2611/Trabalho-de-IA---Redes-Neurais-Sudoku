@@ -52,12 +52,70 @@ O Sudoku 4x4 deve respeitar:
 │   ├── test.py
 │   ├── solver.py
 │   └── utils.py
-│
-└── docs/
-    └── explicacao.md
+
 ```
 
 ---
+
+# Explicação da solução
+
+## Por que usar uma RNA?
+
+A Rede Neural Artificial multicamadas é usada para aprender uma relação entre um tabuleiro parcial de Sudoku 4x4 e sua respectiva solução completa.
+
+A entrada da rede é um vetor codificado em one-hot representando o tabuleiro inicial. A saída é composta por 16 classificações, uma para cada célula do tabuleiro.
+
+Cada célula pode assumir uma das quatro classes possíveis:
+
+```text
+1, 2, 3 ou 4
+```
+
+## Codificação
+
+Como o tabuleiro também pode possuir células vazias, a entrada utiliza cinco possibilidades:
+
+```text
+0, 1, 2, 3, 4
+```
+
+O valor `0` representa uma célula vazia.
+
+Assim, um tabuleiro 4x4 gera:
+
+```text
+4 x 4 x 5 = 80 entradas
+```
+
+## Saída da rede
+
+A saída possui:
+
+```text
+16 células x 4 classes = 64 valores
+```
+
+Depois, a classe de maior probabilidade em cada célula é convertida para um número de 1 a 4.
+
+## Problema da geração de amostras
+
+Gerar amostras e testá-las parece simples, mas isso é força bruta. Para Sudoku 4x4, ainda é viável. Para Sudoku NxN, o número de combinações cresce rapidamente.
+
+Além disso, Sudoku não é apenas reconhecimento de padrões. É um problema de raciocínio com restrições globais.
+
+Uma escolha errada em uma célula pode invalidar uma linha, uma coluna e um subgrupo ao mesmo tempo.
+
+## Melhorias possíveis
+
+Uma solução mais forte poderia usar a RNA apenas para sugerir probabilidades e depois aplicar um algoritmo lógico para corrigir conflitos.
+
+Exemplos:
+
+- backtracking;
+- SAT solver;
+- programação por restrições;
+- Logic Tensor Networks;
+- redes neurais com perdas baseadas em restrições.
 
 ## Instalação
 
