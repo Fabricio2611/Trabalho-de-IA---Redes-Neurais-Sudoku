@@ -2,6 +2,13 @@
 
 Este projeto propõe uma solução com Rede Neural Artificial multicamadas, implementada em Python com PyTorch, para reconhecer e completar tabuleiros de Sudoku 4x4 com subgrupos 2x2.
 
+**Integrantes**
+  - Alexandre Antonaccio Senna
+  - Fabricio Lessa Lorenzi Filho
+  - Jurandy Alves Nogueira Junior
+  - Tiago Rodrigues Bezerra
+
+
 O conjunto de símbolos utilizado é:
 
 ```text
