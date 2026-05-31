@@ -53,9 +53,6 @@ O Sudoku 4x4 deve respeitar:
 │   ├── solver.py
 │   └── utils.py
 │
-├── outputs/
-│   └── README.md
-│
 └── docs/
     └── explicacao.md
 ```
