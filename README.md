@@ -41,8 +41,6 @@ O Sudoku 4x4 deve respeitar:
 ## Estrutura do projeto
 
 ```text
-sudoku-rna-4x4/
-│
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
