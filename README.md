@@ -122,8 +122,8 @@ Exemplos:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/sudoku-rna-4x4.git
-cd sudoku-rna-4x4
+git clone https://github.com/Fabricio2611/Trabalho-de-IA---Redes-Neurais-Sudoku.git
+cd Trabalho-de-IA---Redes-Neurais-Sudoku
 ```
 
 Crie um ambiente virtual:
